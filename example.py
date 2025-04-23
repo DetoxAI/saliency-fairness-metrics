@@ -1,16 +1,3 @@
-## Metrics for quantitative analysis of the effectiveness of debiasing and artifact removal methods through the lens of saliency maps
-
-This repository contains code that was used in "Investigating the Relationship Between Debiasing and Artifact Removal using Saliency Maps" paper at XAI-2025 conference. Arxiv link: https://arxiv.org/abs/2503.00234
-
-
-## Installation
-
-```bash
-pip install -r requirements.txt
-```
-
-## A minimalistic example
-```python
 import torch
 import torchvision
 import detoxai
@@ -61,17 +48,3 @@ visualizer = SSVisualizer(
 
 visualizer.visualize_batch(batch_num=0, show_labels=False, max_images=16)
 visualizer.local_save("images/example.png")
-```
-
-**Outputs:**
-```bash
-RRF: 0.1988 ± 0.0697
-HRF: 0.1047 ± 0.1363
-ADR: 0.0000 ± 0.0000
-```
-![Example of result visualization with detoxai](images/example-readme.png)
-
-
-
-***
-### MIT License

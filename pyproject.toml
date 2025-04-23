@@ -1,0 +1,16 @@
+[project]
+name = "saliency-fairness-metrics"
+version = "0.1.0"
+description = "This repository contains code that was used in [Investigating the Relationship Between Debiasing and Artifact Removal using Saliency Maps] paper at XAI-2025 conference. Arxiv link: https://arxiv.org/abs/2503.00234"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "detoxai==0.3.3",
+    "matplotlib>=3.10.1",
+    "numpy>=2.2.5",
+    "pandas>=2.2.3",
+    "scipy>=1.15.2",
+    "torchvision>=0.21.0",
+    "tqdm>=4.67.1",
+    "zennit>=0.5.1",
+]
