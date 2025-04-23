@@ -65,9 +65,10 @@ visualizer.local_save("images/example.png")
 
 **Outputs:**
 ```bash
-RRF: 0.1988 ± 0.0697
-HRF: 0.1047 ± 0.1363
-ADR: 0.0000 ± 0.0000
+RRF: 0.2551 ± 0.1072
+HRF: 0.0862 ± 0.0908
+ADR: 0.0036 ± 0.0134
+RDDT: 0.0000 ± 0.9802
 ```
 ![Example of result visualization with detoxai](images/example-readme.png)
 
