@@ -72,7 +72,18 @@ RDDT: 0.0000 ± 0.9802
 ```
 ![Example of result visualization with detoxai](images/example-readme.png)
 
-
+## Cite as
+```
+@misc{sztukiewicz2025,
+      title={Towards Fairness for the Right Reasons: Using Saliency Maps to Evaluate Bias Removal in Neural Networks}, 
+      author={Lukasz Sztukiewicz and Ignacy St\k{e}pka and Micha\l{} Wili\'{n}ski and Jerzy Stefanowski},
+      year={2025},
+      eprint={2503.00234},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2503.00234}, 
+}
+```
 
 ***
 ### MIT License
