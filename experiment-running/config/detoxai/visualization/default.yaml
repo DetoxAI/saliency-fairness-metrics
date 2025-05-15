@@ -1,0 +1,16 @@
+viz_batch: 1
+max_images: 9
+show_labels: false
+scatter:
+  rows:
+  - Accuracy
+  - GMean
+  - F1
+  cols:
+  - Equalized_odds
+  - Demographic_parity
+  - Equal_opportunity
+  - Accuracy_parity
+  ticks_x: 4
+  ticks_y: 4
+  round_to: 3

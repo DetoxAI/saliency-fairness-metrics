@@ -1,0 +1,11 @@
+model:
+  name: ${model_name}
+
+dataloader:
+  num_workers: 6
+  batch_size: 128
+
+training:
+  lr: 0.0003
+  max_epochs: 1
+  enable_checkpointing: false

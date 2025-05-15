@@ -1,0 +1,66 @@
+# -- CONFIG ---
+dataset: ${dataset.name} #FIXIT legacy
+fraction: ${dataset.fraction}
+variant: ${dataset.variant.name} #FIXIT legacy
+
+splits:
+
+  train:
+    balancing:
+    - attribute_combination:
+      - attribute: ${target_attribute}
+        label: 0
+      - attribute: ${protected_attribute}
+        label: 1
+      percentage: ${train_percentage}
+    - attribute_combination:
+      - attribute: ${target_attribute}
+        label: 1
+      - attribute: ${protected_attribute}
+        label: 0
+      percentage: ${train_percentage}
+    fraction: ${dataset.split_fractions.train}
+
+  test:
+    balancing:
+    - attribute_combination:
+      - attribute: ${target_attribute}
+        label: 1
+      - attribute: ${protected_attribute}
+        label: 0
+      percentage: 0.25
+    - attribute_combination:
+      - attribute: ${target_attribute}
+        label: 1
+      - attribute: ${protected_attribute}
+        label: 1
+      percentage: 0.25
+    - attribute_combination:
+      - attribute: ${target_attribute}
+        label: 0
+      - attribute: ${protected_attribute}
+        label: 0
+      percentage: 0.25
+    - attribute_combination:
+      - attribute: ${target_attribute}
+        label: 0
+      - attribute: ${protected_attribute}
+        label: 1
+      percentage: 0.25
+    fraction: ${dataset.split_fractions.test}
+
+  unlearn:
+    balancing:
+    - attribute_combination:
+      - attribute: ${target_attribute}
+        label: 1
+      - attribute: ${protected_attribute}
+        label: 0
+      percentage: ${unlearn_percentage}
+    - attribute_combination:
+      - attribute: ${target_attribute}
+        label: 1
+      - attribute: ${protected_attribute}
+        label: 1
+      percentage: ${unlearn_percentage}
+    fraction: ${dataset.split_fractions.unlearn}

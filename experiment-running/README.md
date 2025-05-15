@@ -1,0 +1,1 @@
+We were running our expeirments using ClearML. If you wish to run this code without ClearML, you should simply remove references to ClearML (task init, logging) from the run.py script. 

@@ -1,0 +1,8 @@
+rectangle:
+  x: 49
+  y: 180
+  w: 120
+  h: 30
+calculator:
+  batches: 5
+  verbose: true

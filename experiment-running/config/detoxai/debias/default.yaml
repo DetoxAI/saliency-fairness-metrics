@@ -1,0 +1,61 @@
+methods:
+- LEACE
+- PCLARC
+- ACLARC
+- RRCLARC
+- SAVANIRP
+- SAVANILWO
+- SAVANIAFT
+- ZHANGM
+- NT
+- FINETUNE
+
+methods_config:
+  global:
+    last_layer_name: last
+    experiment_name: default
+    device: cuda
+  PCLARC:
+    cav_type: signal
+    cav_layers: penultimate
+    use_cache: true
+  ACLARC:
+    cav_type: signal
+    cav_layers: penultimate
+    use_cache: true
+  RRCLARC:
+    cav_type: signal
+    cav_layers: penultimate
+    use_cache: true
+  LEACE:
+    intervention_layers: penultimate
+    use_cache: true
+  SAVANIRP:
+    placeholder: True
+  SAVANILWO:
+    n_layers_to_optimize: 4
+  SAVANIAFT:
+    placeholder: True
+  ZHANGM:
+    placeholder: True
+  ROC:
+    theta_range:
+    - 0.55
+    - 0.95
+    theta_steps: 20
+    metric: EO_GAP
+  NT:
+    threshold_range:
+    - 0.1
+    - 0.9
+    threshold_steps: 20
+    metric: EO_GAP
+    objective_function: 'lambda fairness, accuracy: -fairness'
+  FINETUNE:
+    fine_tune_epochs: 2
+    lr: 0.0001
+pareto_metrics:
+- Balanced_accuracy
+- Equalized_odds
+metrics: all
+return_type: all

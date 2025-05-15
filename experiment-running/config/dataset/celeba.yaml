@@ -1,0 +1,18 @@
+defaults:
+- variant/variant_config: celeba
+
+name: celeba
+fraction: 1.0
+target: ${target_attribute} #FIXIT legacy
+
+variant:
+    name: ${dataset.name}_${target_attribute}_${protected_attribute}_train_${train_percentage}_unlearn_${unlearn_percentage}_${dataset.split_fractions.unlearn}_true_balance
+    target_attribute: ${target_attribute}
+    target_attribute_value: ${target_attribute_value}
+    protected_attribute: ${protected_attribute}
+    protected_attribute_value: ${protected_attribute_value}
+
+split_fractions:
+  train: 0.30
+  test: 0.50
+  unlearn: 0.20

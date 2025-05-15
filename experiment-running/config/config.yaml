@@ -1,0 +1,27 @@
+# -- DEFAULTS ---
+defaults:
+- clearml: default
+- dataset: celeba
+- detoxai/debias: default
+- detoxai/visualization: default
+- experiment: default
+- general: debug
+- xai: necktie
+- _self_
+
+# -- VARS ---
+target_attribute: Smiling
+target_attribute_value: 1
+protected_attribute: Wearing_Necktie
+protected_attribute_value: 1
+
+model_name: resnet50
+train_percentage: 0.50
+unlearn_percentage: 0.25
+
+# Maybe acronyms?
+# dn: mnist #dataset_name
+# ta: digit #target_attribute
+# tav: 1 #target_attribute_value
+# pa: artifact_color #protected_attribute
+# pav: -1 #protected_attribute_value

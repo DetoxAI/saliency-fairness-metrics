@@ -1,0 +1,20 @@
+defaults:
+- variant/variant_config: mnist
+
+name: mnist
+fraction: 1.0
+
+# unlearn_attribute: shape
+# unlearn_attribute_value: -1
+
+variant:
+    name: ${dataset.name}_${target_attribute}_${protected_attribute}_train_${train_percentage}_unlearn_${unlearn_percentage}
+    target_attribute: ${target_attribute}
+    target_attribute_value: ${target_attribute_value}
+    protected_attribute: ${protected_attribute}
+    protected_attribute_value: ${protected_attribute_value}
+
+split_fractions:
+  train: 0.50
+  test: 0.30
+  unlearn: 0.20
